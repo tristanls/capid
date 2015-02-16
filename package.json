@@ -1,0 +1,14 @@
+{
+  "name": "capid",
+  "version": "1.0.0",
+  "description": "Capability Unique Identifier",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tristanls/capid.git"
+  },
+  "contributors": [
+    "Tristan Slominski <tristan.slominski@gmail.com>"
+  ],
+  "license": "MIT"
+}
