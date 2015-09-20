@@ -21,10 +21,12 @@ Given `N` number of possible identifiers and `n` random choices of identifiers, 
 
 Let `N = 2^336` (42 bytes).
 
-Let `n = 1e48` (`1e48 ~= 2^159.45`) id's created. (for comparison: 4e20 is the number of milliseconds since the beginning of the Universe (13.8 billion years); 1e41 (~= 2^136) is the number of events you'd get if every millisecond since the beginning of the Universe generated 4e20 events).
+Let `n = 1e48` (`1e48 ~= 2^159.45`) id's created. (for comparison: `4e20` is the number of milliseconds since the beginning of the Universe (13.8 billion years); `1e41` (`~= 2^136`) is the number of events you'd get if every millisecond since the beginning of the Universe generated `4e20` events).
 
 The expected number of randomly assigning the same identifier for `n = 1e48` and `N = 2^336` is `0.00000714`.
-The expected number of randomly assigning the same identifier is `1` when `n = 2^168`.
+The expected number of randomly assigning the same identifier is `1` when `n = 2^168`, or more generally, when `N = n^2`.
+
+This gives us guidance that we want `N` number of possible identifiers to be greater than `n^2` where `n` is the number of identifiers chosen. Each additional bit of address space beyond the `n^2` requirement halves the expected number of randomly assigning the same identifier.
 
 ## Sources
 
